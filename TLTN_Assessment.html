@@ -725,175 +725,193 @@
 
         // Alpine.js data
         function consciousnessAssessment() {
-            return {
-                started: false,
-                showResults: false,
-                currentQuestion: 0,
-                answers: {},
-                email: '',
-                firstName: '',
-                questions: assessmentQuestions,
+    return {
+        started: false,
+        showResults: false,
+        currentQuestion: 0,
+        answers: {},
+        email: '',
+        firstName: '',
+        questions: assessmentQuestions,
+        primaryStage: 'D', // Initialize with default value
+        
+        startAssessment() {
+            if (!this.email) return;
+            // Here you would integrate with your email service
+            console.log('Email captured:', this.email, this.firstName);
+            this.started = true;
+        },
+        
+        selectAnswer(letter) {
+            this.answers[this.currentQuestion] = letter;
+            console.log('Answer selected:', letter, 'for question:', this.currentQuestion);
+        },
+        
+        nextQuestion() {
+            if (this.currentQuestion < this.questions.length - 1) {
+                this.currentQuestion++;
+            } else {
+                this.calculateResults();
+            }
+        },
+        
+        previousQuestion() {
+            if (this.currentQuestion > 0) {
+                this.currentQuestion--;
+            }
+        },
+        
+        calculateResults() {
+            console.log('Calculating results with answers:', this.answers);
+            
+            try {
+                const counts = { A: 0, B: 0, C: 0, D: 0, E: 0, F: 0 };
                 
-                startAssessment() {
-                    if (!this.email) return;
-                    // Here you would integrate with your email service
-                    console.log('Email captured:', this.email, this.firstName);
-                    this.started = true;
-                },
-                
-                selectAnswer(letter) {
-                    this.answers[this.currentQuestion] = letter;
-                },
-                
-                nextQuestion() {
-                    if (this.currentQuestion < this.questions.length - 1) {
-                        this.currentQuestion++;
-                    } else {
-                        this.calculateResults();
+                // Count all answers
+                Object.values(this.answers).forEach(answer => {
+                    if (counts.hasOwnProperty(answer)) {
+                        counts[answer]++;
                     }
-                },
+                });
                 
-                previousQuestion() {
-                    if (this.currentQuestion > 0) {
-                        this.currentQuestion--;
-                    }
-                },
+                console.log('Letter counts:', counts);
                 
-                calculateResults() {
-                    try {
-                        const counts = { A: 0, B: 0, C: 0, D: 0, E: 0, F: 0 };
-                        
-                        Object.values(this.answers).forEach(answer => {
-                            if (counts.hasOwnProperty(answer)) {
-                                counts[answer]++;
-                            }
-                        });
-                        
-                        const primary = Object.keys(counts).reduce((a, b) => counts[a] > counts[b] ? a : b);
-                        this.primaryStage = primary;
-                        this.showResults = true;
-                    } catch (error) {
-                        console.warn('Results calculation error:', error);
-                        this.primaryStage = 'D'; // Default to values-oriented
-                        this.showResults = true;
-                    }
-                },
+                // Find the letter with highest count
+                const primary = Object.keys(counts).reduce((a, b) => counts[a] > counts[b] ? a : b);
                 
-                getStageTitle() {
-                    const titles = {
-                        A: "Security-Oriented Consciousness",
-                        B: "Community-Oriented Consciousness", 
-                        C: "Achievement-Oriented Consciousness",
-                        D: "Values-Oriented Consciousness",
-                        E: "Systems-Oriented Consciousness",
-                        F: "Service-Oriented Consciousness"
-                    };
-                    return titles[this.primaryStage] || "Values-Oriented Consciousness";
-                },
+                // Ensure we have a valid primary stage
+                this.primaryStage = primary || 'D';
                 
-                getStageSubtitle() {
-                    const subtitles = {
-                        A: "Focus on Safety & Stability",
-                        B: "Focus on Belonging & Harmony",
-                        C: "Focus on Success & Achievement", 
-                        D: "Focus on Authenticity & Values",
-                        E: "Focus on Systems & Complexity",
-                        F: "Focus on Service & Evolution"
-                    };
-                    return subtitles[this.primaryStage] || "Focus on Authenticity & Values";
-                },
+                console.log('Primary stage determined:', this.primaryStage);
                 
-                getStageDescription() {
-                    const descriptions = {
-                        A: `<p class="text-purple-200 mb-4">Your consciousness is primarily oriented toward ensuring safety, security, and meeting basic needs. You have strong practical wisdom about survival concerns and resource management.</p>
-                        <div class="space-y-3">
-                            <div><span class="text-green-400 font-semibold">Strengths:</span> Practical approach, crisis management, realistic risk assessment</div>
-                            <div><span class="text-yellow-400 font-semibold">Development Edge:</span> Greater individual identity and personal empowerment</div>
-                            <div><span class="text-blue-400 font-semibold">What's Emerging:</span> Confidence in your capabilities and ability to take calculated risks</div>
-                        </div>`,
-                        B: `<p class="text-purple-200 mb-4">Your consciousness is primarily oriented toward belonging, harmony, and maintaining valued relationships. You excel at community connection and collaborative problem-solving.</p>
-                        <div class="space-y-3">
-                            <div><span class="text-green-400 font-semibold">Strengths:</span> Social awareness, empathy, collaboration, community wisdom</div>
-                            <div><span class="text-yellow-400 font-semibold">Development Edge:</span> Stronger individual identity and authentic self-expression</div>
-                            <div><span class="text-blue-400 font-semibold">What's Emerging:</span> Confidence in your unique perspective while maintaining relationships</div>
-                        </div>`,
-                        C: `<p class="text-purple-200 mb-4">Your consciousness is primarily oriented toward success, recognition, and strategic accomplishment. You excel at analytical thinking and achieving concrete results.</p>
-                        <div class="space-y-3">
-                            <div><span class="text-green-400 font-semibold">Strengths:</span> Strategic thinking, goal achievement, rational problem-solving</div>
-                            <div><span class="text-yellow-400 font-semibold">Development Edge:</span> Value-based decision-making beyond external validation</div>
-                            <div><span class="text-blue-400 font-semibold">What's Emerging:</span> Deeper meaning and purpose beyond external achievement</div>
-                        </div>`,
-                        D: `<p class="text-purple-200 mb-4">Your consciousness is primarily oriented toward authenticity, meaning, and value-aligned living. You excel at integrity and consistent authentic expression.</p>
-                        <div class="space-y-3">
-                            <div><span class="text-green-400 font-semibold">Strengths:</span> Clear values, authentic expression, integrity, meaningful relationships</div>
-                            <div><span class="text-yellow-400 font-semibold">Development Edge:</span> Systems thinking and collective perspective</div>
-                            <div><span class="text-blue-400 font-semibold">What's Emerging:</span> Applying values to complex systems challenges</div>
-                        </div>`,
-                        E: `<p class="text-purple-200 mb-4">Your consciousness is primarily oriented toward understanding complexity and addressing root causes. You excel at systems thinking and holding multiple perspectives.</p>
-                        <div class="space-y-3">
-                            <div><span class="text-green-400 font-semibold">Strengths:</span> Systems thinking, complexity navigation, root cause analysis</div>
-                            <div><span class="text-yellow-400 font-semibold">Development Edge:</span> Transpersonal perspective and service orientation</div>
-                            <div><span class="text-blue-400 font-semibold">What's Emerging:</span> Service orientation utilizing systems understanding</div>
-                        </div>`,
-                        F: `<p class="text-purple-200 mb-4">Your consciousness is primarily oriented toward collective evolution and planetary service. You excel at integrating personal development with transpersonal perspective.</p>
-                        <div class="space-y-3">
-                            <div><span class="text-green-400 font-semibold">Strengths:</span> Transpersonal perspective, service orientation, consciousness integration</div>
-                            <div><span class="text-yellow-400 font-semibold">Development Edge:</span> Mastery and transmission capabilities</div>
-                            <div><span class="text-blue-400 font-semibold">What's Emerging:</span> Teaching and transmission abilities for consciousness development</div>
-                        </div>`
-                    };
-                    return descriptions[this.primaryStage];
-                },
+                this.showResults = true;
                 
-                getTransitionGuidance() {
-                    const guidance = {
-                        A: `<p class="text-purple-200">Your transition navigation style works best with:</p>
-                        <ul class="list-disc list-inside text-purple-200 mt-2 space-y-1">
-                            <li>Extra support and gradual approaches to major changes</li>
-                            <li>Establishing strong safety foundations before pursuing growth</li>
-                            <li>Practical, step-by-step guidance that honors security concerns</li>
-                            <li>Trauma-informed approaches that build trust slowly</li>
-                        </ul>`,
-                        B: `<p class="text-purple-200">Your transition navigation style works best with:</p>
-                        <ul class="list-disc list-inside text-purple-200 mt-2 space-y-1">
-                            <li>Community support and group approaches to change</li>
-                            <li>Guidance that honors relationships while encouraging individual development</li>
-                            <li>Traditional wisdom combined with gentle innovation</li>
-                            <li>Approaches that balance individual needs with community harmony</li>
-                        </ul>`,
-                        C: `<p class="text-purple-200">Your transition navigation style works best with:</p>
-                        <ul class="list-disc list-inside text-purple-200 mt-2 space-y-1">
-                            <li>Evidence-based approaches with clear frameworks and methodologies</li>
-                            <li>Understanding transition as strategic opportunity for upgrade</li>
-                            <li>Systematic approaches with measurable progress indicators</li>
-                            <li>Honoring achievement orientation while expanding definition of success</li>
-                        </ul>`,
-                        D: `<p class="text-purple-200">Your transition navigation style works best with:</p>
-                        <ul class="list-disc list-inside text-purple-200 mt-2 space-y-1">
-                            <li>Approaches that honor your values while expanding practical effectiveness</li>
-                            <li>Frameworks that integrate authenticity with strategic capability</li>
-                            <li>Guidance connecting personal values with collective benefit</li>
-                            <li>Depth approaches supporting both individual and collective evolution</li>
-                        </ul>`,
-                        E: `<p class="text-purple-200">Your transition navigation style works best with:</p>
-                        <ul class="list-disc list-inside text-purple-200 mt-2 space-y-1">
-                            <li>Comprehensive frameworks addressing multiple dimensions simultaneously</li>
-                            <li>Approaches honoring complexity while providing practical application</li>
-                            <li>Guidance integrating systems understanding with embodied wisdom</li>
-                            <li>Integral approaches bridging analytical and intuitive intelligence</li>
-                        </ul>`,
-                        F: `<p class="text-purple-200">Your transition navigation style works best with:</p>
-                        <ul class="list-disc list-inside text-purple-200 mt-2 space-y-1">
-                            <li>Approaches integrating spiritual development with practical effectiveness</li>
-                            <li>Guidance connecting personal growth with planetary service</li>
-                            <li>Frameworks supporting transcendent perspective and embodied engagement</li>
-                            <li>Teaching opportunities that deepen understanding through service</li>
-                        </ul>`
-                    };
-                    return guidance[this.primaryStage];
-                }
+            } catch (error) {
+                console.error('Results calculation error:', error);
+                this.primaryStage = 'D'; // Default to values-oriented
+                this.showResults = true;
+            }
+        },
+        
+        getStageTitle() {
+            const titles = {
+                A: "Security-Oriented Consciousness",
+                B: "Community-Oriented Consciousness", 
+                C: "Achievement-Oriented Consciousness",
+                D: "Values-Oriented Consciousness",
+                E: "Systems-Oriented Consciousness",
+                F: "Service-Oriented Consciousness"
             };
+            return titles[this.primaryStage] || "Values-Oriented Consciousness";
+        },
+        
+        getStageSubtitle() {
+            const subtitles = {
+                A: "Focus on Safety & Stability",
+                B: "Focus on Belonging & Harmony",
+                C: "Focus on Success & Achievement", 
+                D: "Focus on Authenticity & Values",
+                E: "Focus on Systems & Complexity",
+                F: "Focus on Service & Evolution"
+            };
+            return subtitles[this.primaryStage] || "Focus on Authenticity & Values";
+        },
+        
+        getStageDescription() {
+            const descriptions = {
+                A: `<p class="text-purple-200 mb-4">Your consciousness is primarily oriented toward ensuring safety, security, and meeting basic needs. You have strong practical wisdom about survival concerns and resource management.</p>
+                <div class="space-y-3">
+                    <div><span class="text-green-400 font-semibold">Strengths:</span> Practical approach, crisis management, realistic risk assessment</div>
+                    <div><span class="text-yellow-400 font-semibold">Development Edge:</span> Greater individual identity and personal empowerment</div>
+                    <div><span class="text-blue-400 font-semibold">What's Emerging:</span> Confidence in your capabilities and ability to take calculated risks</div>
+                </div>`,
+                B: `<p class="text-purple-200 mb-4">Your consciousness is primarily oriented toward belonging, harmony, and maintaining valued relationships. You excel at community connection and collaborative problem-solving.</p>
+                <div class="space-y-3">
+                    <div><span class="text-green-400 font-semibold">Strengths:</span> Social awareness, empathy, collaboration, community wisdom</div>
+                    <div><span class="text-yellow-400 font-semibold">Development Edge:</span> Stronger individual identity and authentic self-expression</div>
+                    <div><span class="text-blue-400 font-semibold">What's Emerging:</span> Confidence in your unique perspective while maintaining relationships</div>
+                </div>`,
+                C: `<p class="text-purple-200 mb-4">Your consciousness is primarily oriented toward success, recognition, and strategic accomplishment. You excel at analytical thinking and achieving concrete results.</p>
+                <div class="space-y-3">
+                    <div><span class="text-green-400 font-semibold">Strengths:</span> Strategic thinking, goal achievement, rational problem-solving</div>
+                    <div><span class="text-yellow-400 font-semibold">Development Edge:</span> Value-based decision-making beyond external validation</div>
+                    <div><span class="text-blue-400 font-semibold">What's Emerging:</span> Deeper meaning and purpose beyond external achievement</div>
+                </div>`,
+                D: `<p class="text-purple-200 mb-4">Your consciousness is primarily oriented toward authenticity, meaning, and value-aligned living. You excel at integrity and consistent authentic expression.</p>
+                <div class="space-y-3">
+                    <div><span class="text-green-400 font-semibold">Strengths:</span> Clear values, authentic expression, integrity, meaningful relationships</div>
+                    <div><span class="text-yellow-400 font-semibold">Development Edge:</span> Systems thinking and collective perspective</div>
+                    <div><span class="text-blue-400 font-semibold">What's Emerging:</span> Applying values to complex systems challenges</div>
+                </div>`,
+                E: `<p class="text-purple-200 mb-4">Your consciousness is primarily oriented toward understanding complexity and addressing root causes. You excel at systems thinking and holding multiple perspectives.</p>
+                <div class="space-y-3">
+                    <div><span class="text-green-400 font-semibold">Strengths:</span> Systems thinking, complexity navigation, root cause analysis</div>
+                    <div><span class="text-yellow-400 font-semibold">Development Edge:</span> Transpersonal perspective and service orientation</div>
+                    <div><span class="text-blue-400 font-semibold">What's Emerging:</span> Service orientation utilizing systems understanding</div>
+                </div>`,
+                F: `<p class="text-purple-200 mb-4">Your consciousness is primarily oriented toward collective evolution and planetary service. You excel at integrating personal development with transpersonal perspective.</p>
+                <div class="space-y-3">
+                    <div><span class="text-green-400 font-semibold">Strengths:</span> Transpersonal perspective, service orientation, consciousness integration</div>
+                    <div><span class="text-yellow-400 font-semibold">Development Edge:</span> Mastery and transmission capabilities</div>
+                    <div><span class="text-blue-400 font-semibold">What's Emerging:</span> Teaching and transmission abilities for consciousness development</div>
+                </div>`
+            };
+            
+            // Always return a description, with fallback
+            return descriptions[this.primaryStage] || descriptions['D'];
+        },
+        
+        getTransitionGuidance() {
+            const guidance = {
+                A: `<p class="text-purple-200">Your transition navigation style works best with:</p>
+                <ul class="list-disc list-inside text-purple-200 mt-2 space-y-1">
+                    <li>Extra support and gradual approaches to major changes</li>
+                    <li>Establishing strong safety foundations before pursuing growth</li>
+                    <li>Practical, step-by-step guidance that honors security concerns</li>
+                    <li>Trauma-informed approaches that build trust slowly</li>
+                </ul>`,
+                B: `<p class="text-purple-200">Your transition navigation style works best with:</p>
+                <ul class="list-disc list-inside text-purple-200 mt-2 space-y-1">
+                    <li>Community support and group approaches to change</li>
+                    <li>Guidance that honors relationships while encouraging individual development</li>
+                    <li>Traditional wisdom combined with gentle innovation</li>
+                    <li>Approaches that balance individual needs with community harmony</li>
+                </ul>`,
+                C: `<p class="text-purple-200">Your transition navigation style works best with:</p>
+                <ul class="list-disc list-inside text-purple-200 mt-2 space-y-1">
+                    <li>Evidence-based approaches with clear frameworks and methodologies</li>
+                    <li>Understanding transition as strategic opportunity for upgrade</li>
+                    <li>Systematic approaches with measurable progress indicators</li>
+                    <li>Honoring achievement orientation while expanding definition of success</li>
+                </ul>`,
+                D: `<p class="text-purple-200">Your transition navigation style works best with:</p>
+                <ul class="list-disc list-inside text-purple-200 mt-2 space-y-1">
+                    <li>Approaches that honor your values while expanding practical effectiveness</li>
+                    <li>Frameworks that integrate authenticity with strategic capability</li>
+                    <li>Guidance connecting personal values with collective benefit</li>
+                    <li>Depth approaches supporting both individual and collective evolution</li>
+                </ul>`,
+                E: `<p class="text-purple-200">Your transition navigation style works best with:</p>
+                <ul class="list-disc list-inside text-purple-200 mt-2 space-y-1">
+                    <li>Comprehensive frameworks addressing multiple dimensions simultaneously</li>
+                    <li>Approaches honoring complexity while providing practical application</li>
+                    <li>Guidance integrating systems understanding with embodied wisdom</li>
+                    <li>Integral approaches bridging analytical and intuitive intelligence</li>
+                </ul>`,
+                F: `<p class="text-purple-200">Your transition navigation style works best with:</p>
+                <ul class="list-disc list-inside text-purple-200 mt-2 space-y-1">
+                    <li>Approaches integrating spiritual development with practical effectiveness</li>
+                    <li>Guidance connecting personal growth with planetary service</li>
+                    <li>Frameworks supporting transcendent perspective and embodied engagement</li>
+                    <li>Teaching opportunities that deepen understanding through service</li>
+                </ul>`
+            };
+            
+            // Always return guidance, with fallback
+            return guidance[this.primaryStage] || guidance['D'];
         }
+    };
+}
 
         function testimonialCarousel() {
             return {
