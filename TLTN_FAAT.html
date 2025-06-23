@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequency Alignment Assessment Tool</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .cosmic-bg {
+            background: linear-gradient(135deg, #1a0933 0%, #2d1b69 25%, #4c1d95 50%, #6b21a8 75%, #7c2d92 100%);
+        }
+        .stage-color-security { background: linear-gradient(to right, #dc2626, #ea580c); }
+        .stage-color-achievement { background: linear-gradient(to right, #d97706, #f59e0b); }
+        .stage-color-values { background: linear-gradient(to right, #059669, #10b981); }
+        .stage-color-systems { background: linear-gradient(to right, #0284c7, #06b6d4); }
+        .stage-color-transpersonal { background: linear-gradient(to right, #7c3aed, #a855f7); }
+    </style>
+</head>
+<body class="min-h-screen cosmic-bg text-white">
+    <div id="app">
+        <!-- Introduction Screen -->
+        <div id="intro-screen" class="min-h-screen cosmic-bg text-white p-4">
+            <div class="max-w-4xl mx-auto">
+                <!-- Header -->
+                <div class="text-center mb-8">
+                    <h1 class="text-4xl font-bold mb-4 bg-gradient-to-r from-yellow-400 to-pink-400 bg-clip-text text-transparent">
+                        The Frequency Alignment Assessment Tool
+                    </h1>
+                    <h2 class="text-2xl font-semibold mb-4 text-purple-200">
+                        Discover Your Consciousness Profile and Transition Roadmap
+                    </h2>
+                    <p class="text-lg italic text-purple-300 max-w-3xl mx-auto">
+                        "Know thyself—not as static identity, but as dynamic consciousness in continuous evolution."
+                    </p>
+                </div>
+
+                <!-- Assessment Overview -->
+                <div class="bg-purple-800/30 rounded-xl p-8 mb-8 border border-purple-600/30">
+                    <h3 class="text-2xl font-bold mb-6 text-center text-purple-300">What You'll Discover</h3>
+                    
+                    <div class="grid md:grid-cols-2 gap-6 mb-8">
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-3">
+                                <div class="bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full w-8 h-8 flex items-center justify-center text-white font-bold">1</div>
+                                <div>
+                                    <h4 class="font-bold text-purple-200">Your Consciousness Stage</h4>
+                                    <p class="text-purple-300 text-sm">Identify your current developmental level and emerging edge</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-3">
+                                <div class="bg-gradient-to-r from-pink-500 to-purple-500 rounded-full w-8 h-8 flex items-center justify-center text-white font-bold">2</div>
+                                <div>
+                                    <h4 class="font-bold text-purple-200">Frequency Alignment Profile</h4>
+                                    <p class="text-purple-300 text-sm">Assess your biofield sensitivity and coherence patterns</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-3">
+                                <div class="bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full w-8 h-8 flex items-center justify-center text-white font-bold">3</div>
+                                <div>
+                                    <h4 class="font-bold text-purple-200">Transition Readiness</h4>
+                                    <p class="text-purple-300 text-sm">Evaluate your preparedness for major life changes</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-3">
+                                <div class="bg-gradient-to-r from-green-500 to-emerald-500 rounded-full w-8 h-8 flex items-center justify-center text-white font-bold">4</div>
+                                <div>
+                                    <h4 class="font-bold text-purple-200">Integration Capacity</h4>
+                                    <p class="text-purple-300 text-sm">Understand your ability to implement insights practically</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Assessment Details -->
+                    <div class="bg-purple-700/30 rounded-lg p-6 mb-6">
+                        <h4 class="font-bold text-purple-300 mb-4">Assessment Structure</h4>
+                        <div class="grid md:grid-cols-4 gap-4 text-center">
+                            <div>
+                                <div class="text-2xl font-bold text-white">20</div>
+                                <div class="text-purple-300 text-sm">Consciousness Questions</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-bold text-white">15</div>
+                                <div class="text-purple-300 text-sm">Frequency Questions</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-bold text-white">10</div>
+                                <div class="text-purple-300 text-sm">Readiness Questions</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-bold text-white">10</div>
+                                <div class="text-purple-300 text-sm">Integration Questions</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Email Capture -->
+                <div class="bg-gradient-to-r from-purple-600/20 to-blue-600/20 border border-purple-500/40 rounded-xl p-8">
+                    <h3 class="text-2xl font-bold text-center mb-6 text-purple-300">
+                        Begin Your Consciousness Assessment
+                    </h3>
+                    <p class="text-center text-purple-200 mb-6">
+                        Receive your detailed personalized report with specific recommendations for your journey.
+                    </p>
+                    
+                    <form id="email-form" class="space-y-4 max-w-md mx-auto">
+                        <div>
+                            <input 
+                                type="email" 
+                                id="email"
+                                placeholder="Enter your email address"
+                                required
+                                class="w-full px-4 py-3 rounded-lg bg-purple-800/50 border border-purple-600 text-white placeholder-purple-400 focus:border-yellow-500 focus:outline-none"
+                            />
+                        </div>
+                        <div>
+                            <input 
+                                type="text" 
+                                id="firstName"
+                                placeholder="First name (optional)"
+                                class="w-full px-4 py-3 rounded-lg bg-purple-800/50 border border-purple-600 text-white placeholder-purple-400 focus:border-yellow-500 focus:outline-none"
+                            />
+                        </div>
+                        <button 
+                            type="submit"
+                            class="w-full bg-gradient-to-r from-yellow-500 to-pink-500 text-white font-bold py-4 rounded-lg text-lg hover:from-yellow-600 hover:to-pink-600 transition-colors"
+                        >
+                            Start My Assessment →
+                        </button>
+                        <p class="text-xs text-purple-400 text-center">
+                            Your privacy is protected. Unsubscribe at any time.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Assessment Screen -->
+        <div id="assessment-screen" class="min-h-screen cosmic-bg text-white p-4 hidden">
+            <div class="max-w-4xl mx-auto">
+                <!-- Progress Header -->
+                <div class="mb-8">
+                    <div class="flex justify-between items-center mb-4">
+                        <h1 class="text-2xl font-bold text-purple-300" id="current-part-title">Consciousness Stage Identification</h1>
+                        <div class="text-purple-300" id="progress-counter">
+                            1 of 55
+                        </div>
+                    </div>
+                    
+                    <div class="bg-purple-800/30 rounded-full h-3 mb-2">
+                        <div id="progress-bar" class="bg-gradient-to-r from-yellow-400 to-pink-400 h-3 rounded-full transition-all duration-500" style="width: 2%;"></div>
+                    </div>
+                    
+                    <div class="text-center text-purple-400 text-sm" id="progress-percentage">
+                        2% Complete
+                    </div>
+                </div>
+
+                <!-- Question Card -->
+                <div class="bg-purple-800/30 rounded-xl p-8 mb-8 border border-purple-600/30">
+                    <div class="mb-6">
+                        <div class="text-purple-400 text-sm mb-2" id="question-category">Consciousness Stage Assessment</div>
+                        <h2 class="text-xl font-semibold text-white leading-relaxed" id="question-text">
+                            Loading question...
+                        </h2>
+                    </div>
+                    
+                    <!-- Rating Scale -->
+                    <div class="space-y-4">
+                        <div class="flex justify-between text-sm text-purple-300 mb-2">
+                            <span>Never True</span>
+                            <span>Always True</span>
+                        </div>
+                        
+                        <div class="flex justify-between space-x-2" id="rating-buttons">
+                            <button class="rating-btn w-12 h-12 rounded-full border-2 border-purple-600 text-purple-300 hover:border-purple-400 font-bold transition-all" data-value="1">1</button>
+                            <button class="rating-btn w-12 h-12 rounded-full border-2 border-purple-600 text-purple-300 hover:border-purple-400 font-bold transition-all" data-value="2">2</button>
+                            <button class="rating-btn w-12 h-12 rounded-full border-2 border-purple-600 text-purple-300 hover:border-purple-400 font-bold transition-all" data-value="3">3</button>
+                            <button class="rating-btn w-12 h-12 rounded-full border-2 border-purple-600 text-purple-300 hover:border-purple-400 font-bold transition-all" data-value="4">4</button>
+                            <button class="rating-btn w-12 h-12 rounded-full border-2 border-purple-600 text-purple-300 hover:border-purple-400 font-bold transition-all" data-value="5">5</button>
+                        </div>
+                        
+                        <div class="flex justify-between text-xs text-purple-400">
+                            <span>1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span>4</span>
+                            <span>5</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation -->
+                <div class="flex justify-between">
+                    <button 
+                        id="prev-btn"
+                        class="bg-purple-700 text-white px-6 py-3 rounded-lg hover:bg-purple-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                    >
+                        Previous
+                    </button>
+                    
+                    <button 
+                        id="next-btn"
+                        class="bg-gradient-to-r from-yellow-500 to-pink-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-yellow-600 hover:to-pink-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                    >
+                        Next
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results Screen -->
+        <div id="results-screen" class="min-h-screen cosmic-bg text-white p-4 hidden">
+            <div class="max-w-6xl mx-auto">
+                <!-- Results Header -->
+                <div class="text-center mb-8">
+                    <h1 class="text-4xl font-bold mb-4 bg-gradient-to-r from-yellow-400 to-pink-400 bg-clip-text text-transparent">
+                        Your Consciousness Profile
+                    </h1>
+                    <p class="text-xl text-purple-200">Personalized Insights for Your Journey</p>
+                </div>
+
+                <!-- Primary Consciousness Stage -->
+                <div id="primary-stage-card" class="stage-color-values rounded-xl p-8 mb-8">
+                    <h2 class="text-3xl font-bold mb-4 text-center text-white" id="stage-title">
+                        Values-Oriented Consciousness
+                    </h2>
+                    <p class="text-xl text-white/90 mb-6 text-center" id="stage-description">
+                        Loading stage description...
+                    </p>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-white/10 rounded-lg p-6">
+                            <h3 class="text-lg font-bold mb-3 text-white">Optimal Strategies</h3>
+                            <ul class="space-y-2" id="strategies-list">
+                                <!-- Strategies will be populated by JavaScript -->
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-white/10 rounded-lg p-6">
+                            <h3 class="text-lg font-bold mb-3 text-white">Next Development Edge</h3>
+                            <p class="text-white/90 text-sm leading-relaxed" id="next-edge">
+                                Loading development edge...
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Detailed Scores -->
+                <div class="grid md:grid-cols-3 gap-6 mb-8">
+                    <!-- Frequency Alignment -->
+                    <div class="bg-purple-800/30 rounded-xl p-6 border border-purple-600/30">
+                        <h3 class="text-xl font-bold mb-4 text-center text-purple-300">Frequency Alignment</h3>
+                        <div class="text-center mb-4">
+                            <div class="text-3xl font-bold text-white" id="frequency-score">45/75</div>
+                            <div class="text-purple-300" id="frequency-level">Moderate Alignment</div>
+                        </div>
+                        
+                        <div class="space-y-3" id="frequency-breakdown">
+                            <!-- Frequency breakdown will be populated by JavaScript -->
+                        </div>
+                    </div>
+
+                    <!-- Transition Readiness -->
+                    <div class="bg-blue-800/30 rounded-xl p-6 border border-blue-600/30">
+                        <h3 class="text-xl font-bold mb-4 text-center text-blue-300">Transition Readiness</h3>
+                        <div class="text-center mb-4">
+                            <div class="text-3xl font-bold text-white" id="readiness-score">35/50</div>
+                            <div class="text-blue-300" id="readiness-level">Moderate Readiness</div>
+                        </div>
+                        
+                        <div class="bg-blue-700/30 rounded-full h-4 mb-4">
+                            <div id="readiness-bar" class="bg-gradient-to-r from-blue-400 to-cyan-400 h-4 rounded-full transition-all duration-1000" style="width: 70%;"></div>
+                        </div>
+                        
+                        <div class="text-center">
+                            <div class="text-sm text-blue-200" id="readiness-description">
+                                Good foundation, some areas to strengthen
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Integration Capacity -->
+                    <div class="bg-green-800/30 rounded-xl p-6 border border-green-600/30">
+                        <h3 class="text-xl font-bold mb-4 text-center text-green-300">Integration Capacity</h3>
+                        <div class="text-center mb-4">
+                            <div class="text-3xl font-bold text-white" id="integration-score">40/50</div>
+                            <div class="text-green-300" id="integration-level">High Integration</div>
+                        </div>
+                        
+                        <div class="bg-green-700/30 rounded-full h-4 mb-4">
+                            <div id="integration-bar" class="bg-gradient-to-r from-green-400 to-emerald-400 h-4 rounded-full transition-all duration-1000" style="width: 80%;"></div>
+                        </div>
+                        
+                        <div class="text-center">
+                            <div class="text-sm text-green-200" id="integration-description">
+                                Excellent at translating insights into action
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="text-center space-y-4">
+                    <button 
+                        onclick="restartAssessment()"
+                        class="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-colors mr-4"
+                    >
+                        Retake Assessment
+                    </button>
+                    <button 
+                        onclick="window.print()"
+                        class="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-green-700 hover:to-emerald-700 transition-colors"
+                    >
+                        Save Results
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Assessment data and state
+        let currentQuestion = 0;
+        let answers = {};
+        let assessmentData = {
+            partA: [
+                // Security/Survival Focus (4 questions)
+                { category: "Security/Survival Focus", question: "My primary concerns involve basic security, safety, and survival needs." },
+                { category: "Security/Survival Focus", question: "I make decisions primarily based on what feels safe and predictable." },
+                { category: "Security/Survival Focus", question: "I rely heavily on group approval and traditional authorities for guidance." },
+                { category: "Security/Survival Focus", question: "I feel overwhelmed by complex decisions and prefer clear, simple choices." },
+                
+                // Achievement Focus (4 questions)
+                { category: "Achievement Focus", question: "I'm motivated primarily by personal success, recognition, and achievement." },
+                { category: "Achievement Focus", question: "I use rational analysis and strategic planning as my main decision-making approach." },
+                { category: "Achievement Focus", question: "Competition and goal attainment are primary drivers in my life." },
+                { category: "Achievement Focus", question: "I measure my worth through external accomplishments and expert recognition." },
+                
+                // Values/Principles Focus (4 questions)
+                { category: "Values/Principles Focus", question: "I prioritize ethical alignment and value consistency over external success." },
+                { category: "Values/Principles Focus", question: "I can no longer participate in activities that conflict with my core principles." },
+                { category: "Values/Principles Focus", question: "Meaning and purpose have become more important than material achievement." },
+                { category: "Values/Principles Focus", question: "I seek work and relationships that align with my authentic values." },
+                
+                // Systems/Integration Focus (4 questions)
+                { category: "Systems/Integration Focus", question: "I think naturally in terms of systems, patterns, and interconnections." },
+                { category: "Systems/Integration Focus", question: "I can hold multiple perspectives simultaneously without needing resolution." },
+                { category: "Systems/Integration Focus", question: "I consider long-term consequences and complex ripple effects in decisions." },
+                { category: "Systems/Integration Focus", question: "I seek solutions that address root causes rather than symptoms." },
+                
+                // Transpersonal/Service Focus (4 questions)
+                { category: "Transpersonal/Service Focus", question: "I feel naturally called to serve collective well-being and planetary evolution." },
+                { category: "Transpersonal/Service Focus", question: "I experience myself as connected to something much larger than individual identity." },
+                { category: "Transpersonal/Service Focus", question: "Spiritual and practical dimensions feel naturally integrated in my life." },
+                { category: "Transpersonal/Service Focus", question: "I'm motivated by contributing to consciousness evolution itself." }
+            ],
+            partB: [
+                // Frequency alignment questions (15 total)
+                { category: "Biofield Sensitivity", question: "I can sense the energy or 'vibe' of people, places, and situations." },
+                { category: "Biofield Sensitivity", question: "My body gives me clear signals about what aligns with my authentic nature." },
+                { category: "Biofield Sensitivity", question: "I notice my energy levels changing based on my environment and relationships." },
+                
+                { category: "Coherence Indicators", question: "When I'm aligned, I experience natural flow and effortless effectiveness." },
+                { category: "Coherence Indicators", question: "I can distinguish between forced motivation and natural enthusiasm." },
+                { category: "Coherence Indicators", question: "My breathing becomes deeper and easier when making aligned choices." },
+                
+                { category: "Interference Recognition", question: "I notice when my guidance feels unclear due to emotional or mental static." },
+                { category: "Interference Recognition", question: "I can identify when I'm making decisions from conditioning rather than authenticity." },
+                { category: "Interference Recognition", question: "I recognize how electromagnetic environments (devices, spaces) affect my clarity." },
+                
+                { category: "Synchronicity Awareness", question: "I notice meaningful coincidences and use them as guidance information." },
+                { category: "Synchronicity Awareness", question: "Resources and support tend to appear when I'm moving in aligned directions." },
+                { category: "Synchronicity Awareness", question: "I pay attention to repeated themes or messages from multiple sources." },
+                
+                { category: "Integration Capacity", question: "I can maintain coherence even during challenging or stressful situations." },
+                { category: "Integration Capacity", question: "I integrate insights from transitions into lasting changes in how I live." },
+                { category: "Integration Capacity", question: "I contribute my growth and learning to supporting others' development." }
+            ],
+            partC: [
+                // Transition readiness (10 questions)
+                { category: "Transition Readiness", question: "I recognize my current challenges as opportunities for consciousness development." },
+                { category: "Transition Readiness", question: "I have adequate support systems for navigating major life changes." },
+                { category: "Transition Readiness", question: "I can tolerate uncertainty without rushing into premature decisions." },
+                { category: "Transition Readiness", question: "I trust the transition process even when I can't see the outcome." },
+                { category: "Transition Readiness", question: "I have practices that help me maintain emotional stability during change." },
+                { category: "Transition Readiness", question: "I can access inner guidance when external frameworks no longer work." },
+                { category: "Transition Readiness", question: "I'm willing to release familiar patterns that no longer serve my growth." },
+                { category: "Transition Readiness", question: "I can distinguish between growth edges and overwhelming challenges." },
+                { category: "Transition Readiness", question: "I have the resources (time, energy, financial) to engage transition work." },
+                { category: "Transition Readiness", question: "I can maintain perspective that current difficulties are temporary." }
+            ],
+            partD: [
+                // Integration capacity (10 questions)
+                { category: "Integration Capacity", question: "Translating insights into practical changes in daily life." },
+                { category: "Integration Capacity", question: "Maintaining growth momentum after crisis periods pass." },
+                { category: "Integration Capacity", question: "Communicating my development to people who don't understand." },
+                { category: "Integration Capacity", question: "Balancing spiritual growth with practical responsibilities." },
+                { category: "Integration Capacity", question: "Creating environmental conditions that support my emerging consciousness." },
+                { category: "Integration Capacity", question: "Establishing boundaries around my development process." },
+                { category: "Integration Capacity", question: "Finding others who understand and support consciousness development." },
+                { category: "Integration Capacity", question: "Maintaining financial stability while pursuing authentic expression." },
+                { category: "Integration Capacity", question: "Navigating relationships that haven't evolved with my growth." },
+                { category: "Integration Capacity", question: "Contributing my development in service to others." }
+            ]
+        };
+
+        // Flatten all questions
+        let allQuestions = [
+            ...assessmentData.partA,
+            ...assessmentData.partB,
+            ...assessmentData.partC,
+            ...assessmentData.partD
+        ];
+
+        // Event listeners
+        document.getElementById('email-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            if (email) {
+                startAssessment();
+            }
+        });
+
+        // Rating button event listeners
+        document.addEventListener('click', function(e) {
+            if (e.target.classList.contains('rating-btn')) {
+                selectRating(parseInt(e.target.dataset.value));
+            }
+        });
+
+        // Navigation buttons
+        document.getElementById('prev-btn').addEventListener('click', previousQuestion);
+        document.getElementById('next-btn').addEventListener('click', nextQuestion);
+
+        function startAssessment() {
+            document.getElementById('intro-screen').classList.add('hidden');
+            document.getElementById('assessment-screen').classList.remove('hidden');
+            loadQuestion();
+        }
+
+        function loadQuestion() {
+            if (currentQuestion >= allQuestions.length) {
+                showResults();
+                return;
+            }
+
+            const question = allQuestions[currentQuestion];
+            
+            // Update UI
+            document.getElementById('question-category').textContent = question.category;
+            document.getElementById('question-text').textContent = question.question;
+            document.getElementById('progress-counter').textContent = `${currentQuestion + 1} of ${allQuestions.length}`;
+            
+            const progressPercent = Math.round(((currentQuestion + 1) / allQuestions.length) * 100);
+            document.getElementById('progress-percentage').textContent = `${progressPercent}% Complete`;
+            document.getElementById('progress-bar').style.width = `${progressPercent}%`;
+            
+            // Clear previous selection
+            document.querySelectorAll('.rating-btn').forEach(btn => {
+                btn.classList.remove('bg-gradient-to-r', 'from-yellow-400', 'to-pink-400', 'text-white', 'border-yellow-400');
+                btn.classList.add('border-purple-600', 'text-purple-300');
+            });
+            
+            // Show current selection if exists
+            if (answers[currentQuestion]) {
+                selectRating(answers[currentQuestion]);
+            }
+            
+            // Update button states
+            document.getElementById('prev-btn').disabled = currentQuestion === 0;
+            document.getElementById('next-btn').disabled = !answers[currentQuestion];
+            
+            if (currentQuestion === allQuestions.length - 1) {
+                document.getElementById('next-btn').textContent = 'Get Results';
+            } else {
+                document.getElementById('next-btn').textContent = 'Next';
+            }
+        }
+
+        function selectRating(value) {
+            answers[currentQuestion] = value;
+            
+            // Update UI
+            document.querySelectorAll('.rating-btn').forEach(btn => {
+                btn.classList.remove('bg-gradient-to-r', 'from-yellow-400', 'to-pink-400', 'text-white', 'border-yellow-400');
+                btn.classList.add('border-purple-600', 'text-purple-300');
+            });
+            
+            const selectedBtn = document.querySelector(`[data-value="${value}"]`);
+            selectedBtn.classList.remove('border-purple-600', 'text-purple-300');
+            selectedBtn.classList.add('bg-gradient-to-r', 'from-yellow-400', 'to-pink-400', 'text-white', 'border-yellow-400');
+            
+            document.getElementById('next-btn').disabled = false;
+        }
+
+        function nextQuestion() {
+            if (currentQuestion < allQuestions.length - 1) {
+                currentQuestion++;
+                loadQuestion();
+            } else {
+                showResults();
+            }
+        }
+
+        function previousQuestion() {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                loadQuestion();
+            }
+        }
+
+        function showResults() {
+            document.getElementById('assessment-screen').classList.add('hidden');
+            document.getElementById('results-screen').classList.remove('hidden');
+            calculateResults();
+        }
+
+        function calculateResults() {
+            // Calculate scores for each part
+            const scores = {
+                partA: { security: 0, achievement: 0, values: 0, systems: 0, transpersonal: 0 },
+                partB: { total: 0 },
+                partC: { readiness: 0 },
+                partD: { integration: 0 }
+            };
+
+            // Part A scores (consciousness stages)
+            for (let i = 0; i < 20; i++) {
+                const value = answers[i] || 0;
+                const stageIndex = Math.floor(i / 4);
+                const stages = ['security', 'achievement', 'values', 'systems', 'transpersonal'];
+                scores.partA[stages[stageIndex]] += value;
+            }
+
+            // Part B scores (frequency alignment)
+            for (let i = 20; i < 35; i++) {
+                scores.partB.total += answers[i] || 0;
+            }
+
+            // Part C scores (transition readiness)
+            for (let i = 35; i < 45; i++) {
+                scores.partC.readiness += answers[i] || 0;
+            }
+
+            // Part D scores (integration capacity)
+            for (let i = 45; i < 55; i++) {
+                scores.partD.integration += answers[i] || 0;
+            }
+
+            // Determine primary consciousness stage
+            const partAScores = scores.partA;
+            const primaryStage = Object.keys(partAScores).reduce((a, b) => 
+                partAScores[a] > partAScores[b] ? a : b
+            );
+
+            displayResults(scores, primaryStage);
+        }
+
+        function displayResults(scores, primaryStage) {
+            const stageInfo = {
+                security: {
+                    title: "Security-Oriented Consciousness",
+                    description: "Your consciousness is primarily oriented toward ensuring safety, security, and meeting basic needs. You have strong practical wisdom about survival concerns and resource management.",
+                    strategies: [
+                        "Establish strong safety foundation before pursuing growth",
+                        "Work with trauma-informed practitioners",
+                        "Use body-based practices to rebuild sense of safety",
+                        "Find supportive community that understands basic security needs"
+                    ],
+                    nextEdge: "Building individual identity and personal power while maintaining security",
+                    color: "stage-color-security"
+                },
+                achievement: {
+                    title: "Achievement-Oriented Consciousness",
+                    description: "Your consciousness is primarily oriented toward success, recognition, and strategic accomplishment. You excel at analytical thinking and achieving concrete results.",
+                    strategies: [
+                        "Examine what success means to you versus others' expectations",
+                        "Explore values that transcend external achievement",
+                        "Develop meaning-making frameworks beyond competition",
+                        "Practice contribution and service as expansion of achievement drive"
+                    ],
+                    nextEdge: "Developing value-based decision making and authentic expression",
+                    color: "stage-color-achievement"
+                },
+                values: {
+                    title: "Values-Oriented Consciousness",
+                    description: "Your consciousness is primarily oriented toward authenticity, meaning, and value-aligned living. You excel at integrity and consistent authentic expression.",
+                    strategies: [
+                        "Find creative ways to express values through practical action",
+                        "Develop strategies that support rather than compromise authenticity",
+                        "Connect with others who share commitment to value-based living",
+                        "Explore how authentic expression can serve collective benefit"
+                    ],
+                    nextEdge: "Developing systems thinking while maintaining value alignment",
+                    color: "stage-color-values"
+                },
+                systems: {
+                    title: "Systems-Oriented Consciousness",
+                    description: "Your consciousness is primarily oriented toward understanding complexity and addressing root causes. You excel at systems thinking and holding multiple perspectives.",
+                    strategies: [
+                        "Develop skills for translating systems insights into actionable steps",
+                        "Practice communicating complex ideas in accessible ways",
+                        "Find opportunities to apply systems thinking practically",
+                        "Balance analytical capabilities with heart-centered engagement"
+                    ],
+                    nextEdge: "Developing transpersonal awareness and service orientation",
+                    color: "stage-color-systems"
+                },
+                transpersonal: {
+                    title: "Transpersonal/Service-Oriented Consciousness",
+                    description: "Your consciousness is primarily oriented toward collective evolution and planetary service. You excel at integrating personal development with transpersonal perspective.",
+                    strategies: [
+                        "Maintain grounding practices connected to practical reality",
+                        "Develop skills for working with people at all consciousness levels",
+                        "Find service opportunities that utilize transpersonal awareness",
+                        "Balance transcendent perspective with embodied engagement"
+                    ],
+                    nextEdge: "Continuing evolution into integrated service-oriented consciousness",
+                    color: "stage-color-transpersonal"
+                }
+            };
+
+            const info = stageInfo[primaryStage];
+            
+            // Update primary stage card
+            document.getElementById('primary-stage-card').className = `${info.color} rounded-xl p-8 mb-8`;
+            document.getElementById('stage-title').textContent = info.title;
+            document.getElementById('stage-description').textContent = info.description;
+            document.getElementById('next-edge').textContent = info.nextEdge;
+            
+            // Update strategies list
+            const strategiesList = document.getElementById('strategies-list');
+            strategiesList.innerHTML = '';
+            info.strategies.forEach(strategy => {
+                const li = document.createElement('li');
+                li.className = 'flex items-start space-x-2 text-white/90';
+                li.innerHTML = `<span class="text-yellow-300 mt-1">•</span><span class="text-sm">${strategy}</span>`;
+                strategiesList.appendChild(li);
+            });
+            
+            // Update scores
+            document.getElementById('frequency-score').textContent = `${scores.partB.total}/75`;
+            document.getElementById('readiness-score').textContent = `${scores.partC.readiness}/50`;
+            document.getElementById('integration-score').textContent = `${scores.partD.integration}/50`;
+            
+            // Update levels
+            const getAlignmentLevel = (score) => {
+                if (score >= 60) return "High Alignment";
+                if (score >= 45) return "Moderate Alignment";
+                if (score >= 30) return "Developing Alignment";
+                return "Emerging Alignment";
+            };
+            
+            const getReadinessLevel = (score) => {
+                if (score >= 40) return "High Readiness";
+                if (score >= 30) return "Moderate Readiness";
+                if (score >= 20) return "Developing Readiness";
+                return "Emerging Readiness";
+            };
+            
+            const getIntegrationLevel = (score) => {
+                if (score >= 40) return "High Integration";
+                if (score >= 30) return "Moderate Integration";
+                if (score >= 20) return "Developing Integration";
+                return "Emerging Integration";
+            };
+            
+            document.getElementById('frequency-level').textContent = getAlignmentLevel(scores.partB.total);
+            document.getElementById('readiness-level').textContent = getReadinessLevel(scores.partC.readiness);
+            document.getElementById('integration-level').textContent = getIntegrationLevel(scores.partD.integration);
+            
+            // Update progress bars
+            document.getElementById('readiness-bar').style.width = `${(scores.partC.readiness / 50) * 100}%`;
+            document.getElementById('integration-bar').style.width = `${(scores.partD.integration / 50) * 100}%`;
+            
+            // Update descriptions
+            const readinessDescriptions = {
+                "High Readiness": "Excellent timing for intensive transition work",
+                "Moderate Readiness": "Good foundation, some areas to strengthen",
+                "Developing Readiness": "Focus on building readiness first",
+                "Emerging Readiness": "Foundation development needed"
+            };
+            
+            const integrationDescriptions = {
+                "High Integration": "Excellent at translating insights into action",
+                "Moderate Integration": "Good integration skills with growth areas",
+                "Developing Integration": "Integration represents a key development area",
+                "Emerging Integration": "Focus on practical application skills"
+            };
+            
+            document.getElementById('readiness-description').textContent = readinessDescriptions[getReadinessLevel(scores.partC.readiness)];
+            document.getElementById('integration-description').textContent = integrationDescriptions[getIntegrationLevel(scores.partD.integration)];
+        }
+
+        function restartAssessment() {
+            currentQuestion = 0;
+            answers = {};
+            document.getElementById('results-screen').classList.add('hidden');
+            document.getElementById('intro-screen').classList.remove('hidden');
+        }
+
+        // Initialize
+        loadQuestion();
+    </script>
+</body>
+</html>

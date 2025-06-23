@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Life Transition Navigator - Science-Based Consciousness Transition Guide</title>
+    <meta name="description" content="Transform uncertainty into opportunity using consciousness development wisdom and strategic frameworks. The first complete system for navigating major life transitions.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js" defer></script>
+    
+    <style>
+        .font-serif { font-family: 'Playfair Display', serif; }
+        .font-sans { font-family: 'Inter', sans-serif; }
+        
+        .cosmic-bg {
+            background: linear-gradient(135deg, #1a0933 0%, #2d1b69 25%, #4c1d95 50%, #6b21a8 75%, #7c2d92 100%);
+        }
+        
+        .compass-glow {
+            filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.3));
+            animation: gentle-pulse 4s ease-in-out infinite;
+        }
+        
+        @keyframes gentle-pulse {
+            0%, 100% { transform: scale(1); opacity: 0.9; }
+            50% { transform: scale(1.02); opacity: 1; }
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #ffd700 0%, #ff6b9d 50%, #a855f7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .cta-button {
+            background: linear-gradient(135deg, #ffd700 0%, #ff6b9d 100%);
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(255, 215, 0, 0.4);
+        }
+        
+        .section-divider {
+            background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.6), transparent);
+            height: 2px;
+            margin: 4rem 0;
+        }
+        
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255, 215, 0, 0.4);
+        }
+        
+        .countdown-timer {
+            background: linear-gradient(135deg, #dc2626 0%, #7c2d92 100%);
+            animation: urgent-pulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes urgent-pulse {
+            0%, 100% { opacity: 0.9; }
+            50% { opacity: 1; transform: scale(1.02); }
+        }
+        
+        .benefit-check {
+            color: #10b981;
+            font-size: 1.2rem;
+            margin-right: 0.5rem;
+        }
+        
+        .problem-x {
+            color: #ef4444;
+            font-size: 1.2rem;
+            margin-right: 0.5rem;
+        }
+        
+        .floating-nav {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        .value-stack {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(168, 85, 247, 0.1) 100%);
+            border: 2px solid rgba(16, 185, 129, 0.3);
+        }
+        
+        .price-strike {
+            text-decoration: line-through;
+            opacity: 0.6;
+        }
+        
+        .urgency-box {
+            background: linear-gradient(135deg, rgba(220, 38, 38, 0.1) 0%, rgba(124, 45, 146, 0.1) 100%);
+            border: 1px solid rgba(220, 38, 38, 0.3);
+        }
+        
+        .scroll-indicator {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #ffd700 0%, #ff6b9d 100%);
+            transform-origin: left;
+            transform: scaleX(0);
+            z-index: 1001;
+        }
+    </style>
+</head>
+<body class="cosmic-bg text-white font-sans">
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-indicator" id="scrollProgress"></div>
+
+    <!-- Floating CTA -->
+    <div class="floating-nav" id="floatingCTA" style="opacity: 0;">
+        <button onclick="scrollToOrder()" class="cta-button text-purple-900 font-bold py-3 px-6 rounded-full shadow-lg">
+            Get Navigator $47 →
+        </button>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center px-4 py-20 relative overflow-hidden">
+        <!-- Background Compass -->
+        <div class="absolute inset-0 flex items-center justify-center opacity-10">
+            <img src="HGB7CyjaOtfqdCGC_G3sc" alt="Compass Background" class="w-full max-w-4xl">
+        </div>
+        
+        <div class="max-w-6xl mx-auto text-center relative z-10">
+            <!-- Logo/Brand -->
+            <div class="mb-8">
+                <img src="V3Zsyoq7H8fLKO5ArSCRJ" alt="Life's Compass" class="w-32 h-auto mx-auto compass-glow">
+            </div>
+            
+            <!-- Main Headline -->
+            <h1 class="font-serif text-5xl md:text-7xl font-bold mb-6">
+                <span class="gradient-text">THE LIFE TRANSITION</span><br>
+                <span class="text-yellow-300">NAVIGATOR</span>
+            </h1>
+            
+            <!-- Subheadline -->
+            <h2 class="text-2xl md:text-3xl text-purple-200 mb-8 leading-relaxed">
+                Finally, A Science-Based Approach to Navigating<br>
+                Life's Biggest Transitions
+            </h2>
+            
+            <!-- Value Proposition -->
+            <p class="text-xl text-purple-100 mb-12 max-w-4xl mx-auto">
+                For people who want to transform uncertainty into opportunity using 
+                <span class="text-yellow-300 font-semibold">consciousness development wisdom</span> 
+                and practical strategic frameworks
+            </p>
+            
+            <!-- Hero CTA -->
+            <button onclick="scrollToOrder()" class="cta-button text-purple-900 font-bold text-xl py-4 px-12 rounded-full mb-8 inline-block">
+                Get The Complete System → $47
+            </button>
+            
+            <!-- Social Proof Snippet -->
+            <p class="text-purple-300 text-sm">
+                ⭐⭐⭐⭐⭐ "Finally, guidance that matches my reality" - Michelle R.
+            </p>
+        </div>
+    </section>
+
+    <!-- Problem Awareness Section -->
+    <section class="py-20 px-4">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="font-serif text-4xl font-bold text-center mb-12 text-yellow-300">
+                If you're here, you probably already know...
+            </h2>
+            
+            <div class="space-y-6 text-lg text-purple-100">
+                <div class="flex items-start">
+                    <span class="benefit-check">✓</span>
+                    <p>Your current transition isn't just about changing external circumstances—something deeper is evolving in your consciousness</p>
+                </div>
+                <div class="flex items-start">
+                    <span class="benefit-check">✓</span>
+                    <p>Traditional self-help approaches feel inadequate for the sophisticated challenges you're facing</p>
+                </div>
+                <div class="flex items-start">
+                    <span class="benefit-check">✓</span>
+                    <p>You need tools that honor both your intellectual sophistication and your emerging developmental capacities</p>
+                </div>
+                <div class="flex items-start">
+                    <span class="benefit-check">✓</span>
+                    <p>Generic advice doesn't work because it's not designed for your specific consciousness stage</p>
+                </div>
+                <div class="flex items-start">
+                    <span class="benefit-check">✓</span>
+                    <p>You're ready for a complete system rather than random tips and surface-level strategies</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <p class="text-xl text-yellow-300 font-semibold">
+                    You're not looking for motivation or quick fixes.<br>
+                    You're looking for genuine transformation tools that work with the reality of consciousness evolution.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Problem Deep Dive -->
+    <section class="py-20 px-4">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="font-serif text-4xl font-bold text-center mb-8 text-red-400">
+                The Problem: Why Most Transition Guidance Fails
+            </h2>
+            
+            <p class="text-xl text-purple-100 text-center mb-16 leading-relaxed">
+                After working with hundreds of people navigating major life changes, I've discovered something crucial: 
+                <span class="text-yellow-300 font-semibold">Most transition advice assumes everyone operates from the same consciousness development stage.</span>
+            </p>
+            
+            <!-- Three Problems -->
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="glass-effect rounded-2xl p-8 text-center">
+                    <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-white font-bold text-2xl">1</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-red-400 mb-4">Stage Mismatch</h3>
+                    <p class="text-purple-200">
+                        You receive achievement-focused advice when your consciousness is developing toward values-based decision-making. 
+                        The tools don't match your developmental reality.
+                    </p>
+                </div>
+                
+                <div class="glass-effect rounded-2xl p-8 text-center">
+                    <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-white font-bold text-2xl">2</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-red-400 mb-4">Missing Integration</h3>
+                    <p class="text-purple-200">
+                        Most approaches address only one aspect—emotional OR strategic OR spiritual—but consciousness transitions 
+                        require sophisticated integration across all dimensions.
+                    </p>
+                </div>
+                
+                <div class="glass-effect rounded-2xl p-8 text-center">
+                    <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-white font-bold text-2xl">3</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-red-400 mb-4">Temporary Insights</h3>
+                    <p class="text-purple-200">
+                        Without proper integration protocols, insights fade when external pressure decreases. 
+                        You return to previous patterns despite profound realizations.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Result -->
+            <div class="text-center bg-red-900/20 border border-red-500/30 rounded-xl p-8">
+                <h3 class="text-2xl font-bold text-red-400 mb-4">The Result?</h3>
+                <p class="text-xl text-purple-100 leading-relaxed">
+                    You end up feeling like a personal development failure when you're actually just receiving guidance 
+                    designed for different consciousness stages with inadequate integration support.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Solution Section -->
+    <section class="py-20 px-4">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="font-serif text-4xl font-bold text-center mb-8 text-green-400">
+                The Solution: Consciousness-Based Navigation
+            </h2>
+            
+            <div class="text-center mb-16">
+                <img src="HGB7CyjaOtfqdCGC_G3sc" alt="Life's Compass Navigator" class="w-64 h-64 mx-auto compass-glow mb-8">
+                
+                <p class="text-xl text-purple-100 mb-8 leading-relaxed">
+                    The Life Transition Navigator is the <span class="text-yellow-300 font-semibold">first complete system</span> 
+                    designed specifically for people navigating consciousness evolution during major life transitions.
+                </p>
+                
+                <div class="glass-effect rounded-xl p-8">
+                    <h3 class="text-2xl font-bold text-green-400 mb-6">Based on decades of research integrating:</h3>
+                    <div class="grid md:grid-cols-2 gap-4 text-left">
+                        <div class="flex items-center">
+                            <span class="benefit-check">•</span>
+                            <span>Consciousness development psychology</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="benefit-check">•</span>
+                            <span>Electromagnetic biofield science</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="benefit-check">•</span>
+                            <span>Ancient wisdom traditions</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="benefit-check">•</span>
+                            <span>Modern neuroscience</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="benefit-check">•</span>
+                            <span>Strategic decision-making frameworks</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="text-2xl text-yellow-300 font-semibold mt-8">
+                    This isn't theory—it's practical wisdom that works in real-world circumstances 
+                    with real-world pressures and responsibilities.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="py-20 px-4" id="how-it-works">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="font-serif text-5xl font-bold text-center mb-16 text-yellow-300">
+                How The Navigator Works
+            </h2>
+            
+            <!-- Section 1 -->
+            <div class="mb-20">
+                <div class="glass-effect rounded-2xl p-8 md:p-12">
+                    <div class="grid md:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <div class="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mb-6">1</div>
+                            <h3 class="font-serif text-3xl font-bold text-blue-400 mb-4">UNDERSTANDING YOUR TRANSITION</h3>
+                            <h4 class="text-xl text-yellow-300 mb-6">"What's Really Happening"</h4>
+                            
+                            <p class="text-purple-200 mb-6">Most people navigate transitions blind. You'll discover:</p>
+                            
+                            <div class="space-y-3">
+                                <div class="flex items-start">
+                                    <span class="benefit-check">✓</span>
+                                    <span>Your specific consciousness stage and its unique characteristics</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="benefit-check">✓</span>
+                                    <span>Your transition type (horizontal, vertical, or spiral) and what each requires</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="benefit-check">✓</span>
+                                    <span>Why you're experiencing what you're experiencing and how to work with it</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="benefit-check">✓</span>
+                                    <span>The predictable phases of consciousness evolution and where you are</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="benefit-check">✓</span>
+                                    <span>Why people get stuck and how to avoid the common developmental traps</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-blue-900/30 rounded-xl p-6">
+                            <h4 class="font-bold text-blue-300 mb-4">Included Tools:</h4>
+                            <ul class="space-y-2 text-blue-200">
+                                <li>• Transition Stage Identification Assessment</li>
+                                <li>• Transition Trigger Analysis Framework</li>
+                                <li>• Overwhelm Decoder (transforms confusion into clarity)</li>
+                            </ul>
+                            
+                            <div class="mt-6 p-4 bg-green-900/30 border border-green-500/30 rounded-lg">
+                                <p class="text-green-200 text-sm italic">
+                                    "Finally understanding what was actually happening changed everything. 
+                                    I stopped fighting against my development and started working with it." - Michelle R.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Section 2 -->
+            <div class="mb-20">
+                <div class="glass-effect rounded-2xl p-8 md:p-12">
+                    <div class="grid md:grid-cols-2 gap-12 items-center">
+                        <div class="bg-purple-900/30 rounded-xl p-6 order-2 md:order-1">
+                            <h4 class="font-bold text-purple-300 mb-4">Included Tools:</h4>
+                            <ul class="space-y-2 text-purple-200">
+                                <li>• Daily Frequency Assessment Protocol</li>
+                                <li>• Decision Coherence Method</li>
+                                <li>• Environmental Support Evaluation</li>
+                            </ul>
+                            
+                            <div class="mt-6 p-4 bg-green-900/30 border border-green-500/30 rounded-lg">
+                                <p class="text-green-200 text-sm italic">
+                                    "The electromagnetic guidance protocols alone are worth the investment. 
+                                    I finally have reliable access to my own wisdom instead of endless external seeking." - David K.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="order-1 md:order-2">
+                            <div class="bg-purple-600 text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mb-6">2</div>
+                            <h3 class="font-serif text-3xl font-bold text-purple-400 mb-4">YOUR CONSCIOUSNESS GPS</h3>
+                            <h4 class="text-xl text-yellow-300 mb-6">"Developing Internal Navigation"</h4>
+                            
+                            <p class="text-purple-200 mb-6">External advice can't substitute for reliable access to your own wisdom. You'll develop:</p>
+                            
+                            <div class="space-y-3">
+                                <div class="flex items-start">
+                                    <span class="benefit-check">✓</span>
+                                    <span>Electromagnetic guidance skills for body-based decision-making during uncertainty</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="benefit-check">✓</span>
+                                    <span>Frequency coherence protocols that enhance clarity and decision-making accuracy</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="benefit-check">✓</span>
+                                    <span>Interference recognition so you know when emotional or environmental static is affecting your guidance</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="benefit-check">✓</span>
+                                    <span>Biofield assessment techniques for evaluating choices before committing resources</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="benefit-check">✓</span>
+                                    <span>Advanced sensing protocols that integrate rational analysis with somatic intelligence</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Section 3 -->
+            <div class="mb-20">
+                <div class="glass-effect rounded-2xl p-8 md:p-12">
+                    <div class="grid md:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <div class="bg-green-600 text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mb-6">3</div>
+                            <h3 class="font-serif text-3xl font-bold text-green-400 mb-4">THE SACRED PAUSE METHODOLOGY</h3>
+                            <h4 class="text-xl text-yellow-300 mb-6">"Transforming Crisis Into Catalyst"</h4>
+                            
+                            <p class="text-purple-200 mb-6">Most people try to escape transitional difficulties. You'll learn to use them as raw material for breakthrough development:</p>
+                            
+                            <div class="space-y-3">
+                                <div class="flex items-start">
+                                    <span class="benefit-check">✓</span>
+                                    <span>The Sacred Pause Protocol - Four-phase methodology for extracting maximum development from transitional challenges</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="benefit-check">✓</span>
+                                    <span>Crisis-to-catalyst transformation that reveals hidden opportunities within apparent obstacles</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="benefit-check">✓</span>
+                                    <span>Meaning-making frameworks that create sustainable motivation from difficult experiences</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="benefit-check">✓</span>
+                                    <span>Integration technologies that ensure insights become permanent capacities</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="benefit-check">✓</span>
+                                    <span>Support system architecture designed for consciousness development rather than crisis management</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-green-900/30 rounded-xl p-6">
+                            <h4 class="font-bold text-green-300 mb-4">Included Tools:</h4>
+                            <ul class="space-y-2 text-green-200">
+                                <li>• 90-Day Sacred Pause Implementation Guide</li>
+                                <li>• Meaning-Making Matrix</li>
+                                <li>• Support System Architect</li>
+                            </ul>
+                            
+                            <div class="mt-6 p-4 bg-green-900/30 border border-green-500/30 rounded-lg">
+                                <p class="text-green-200 text-sm italic">
+                                    "The Sacred Pause changed my relationship to uncertainty completely. 
+                                    What used to feel like crisis now feels like evolution trying to happen." - Jennifer L.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Section 4 -->
+            <div class="mb-20">
+                <div class="glass-effect rounded-2xl p-8 md:p-12">
+                    <div class="grid md:grid-cols-2 gap-12 items-center">
+                        <div class="bg-yellow-900/30 rounded-xl p-6 order-2 md:order-1">
+                            <h4 class="font-bold text-yellow-300 mb-4">Included Tools:</h4>
+                            <ul class="space-y-2 text-yellow-200">
+                                <li>• Transition Decision Matrix</li>
+                                <li>• Opportunity Recognition Grid</li>
+                                <li>• 90-Day Integration Planner</li>
+                            </ul>
+                            
+                            <div class="mt-6 p-4 bg-green-900/30 border border-green-500/30 rounded-lg">
+                                <p class="text-green-200 text-sm italic">
+                                    "The Strategic Navigation framework helped me make decisions that honored both my emerging consciousness and practical responsibilities. Game-changing." - Sarah M.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="order-1 md:order-2">
+                            <div class="bg-yellow-600 text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mb-6">4</div>
+                            <h3 class="font-serif text-3xl font-bold text-yellow-400 mb-4">STRATEGIC NAVIGATION FRAMEWORK</h3>
+                            <h4 class="text-xl text-yellow-300 mb-6">"Making Decisions That Actually Work"</h4>
+                            
+                            <p class="text-purple-200 mb-6">Understanding and inner wisdom must translate into practical life changes. You'll master:</p>
+                            
+                            <div class="space-y-3">
+                                <div class="flex items-start">
+                                    <span class="benefit-check">✓</span>
+                                    <span>Consciousness-informed decision-making that integrates developmental awareness with strategic thinking</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="benefit-check">✓</span>
+                                    <span>Timeline coordination frameworks for balancing short-term needs with long-term authentic direction</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="benefit-check">✓</span>
+                                    <span>Opportunity recognition systems that help you identify and engage breakthrough possibilities</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="benefit-check">✓</span>
+                                    <span>Resource allocation strategies that multiply effectiveness while maintaining energy sustainability</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="benefit-check">✓</span>
+                                    <span>Integration planning that ensures your transition insights create lasting life enhancement</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- Bonus Materials Section -->
+    <section class="py-20 px-4">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="font-serif text-4xl font-bold text-center mb-8 text-yellow-300">
+                EXCLUSIVE BONUS MATERIALS
+            </h2>
+            <p class="text-center text-2xl text-purple-200 mb-16">
+                Included Free This Week Only <span class="text-green-400 font-bold">(Value: $297)</span>
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Bonus 1 -->
+                <div class="value-stack rounded-2xl p-8">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-3xl">🎁</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-purple-400 mb-2">BONUS #1</h3>
+                        <h4 class="text-xl text-yellow-300 mb-2">Sacred Pause Meditation Collection</h4>
+                        <p class="text-green-400 font-bold">($47 Value)</p>
+                    </div>
+                    
+                    <p class="text-purple-200 mb-4">Five professionally-produced guided meditations specifically designed for transition moments:</p>
+                    
+                    <ul class="space-y-2 text-purple-200">
+                        <li>• Transition Recognition (18 min)</li>
+                        <li>• Frequency Alignment (20 min)</li>
+                        <li>• Sacred Pause Integration (19 min)</li>
+                        <li>• Strategic Decision Integration (17 min)</li>
+                        <li>• Evolutionary Momentum (16 min)</li>
+                    </ul>
+                </div>
+                
+                <!-- Bonus 2 -->
+                <div class="value-stack rounded-2xl p-8">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-3xl">🎁</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-blue-400 mb-2">BONUS #2</h3>
+                        <h4 class="text-xl text-yellow-300 mb-2">Consciousness Code Quick-Reference Cards</h4>
+                        <p class="text-green-400 font-bold">($67 Value)</p>
+                    </div>
+                    
+                    <p class="text-purple-200 mb-4">21 beautifully designed cards containing essential principles from consciousness development research:</p>
+                    
+                    <ul class="space-y-2 text-purple-200">
+                        <li>• Portable wisdom for daily guidance</li>
+                        <li>• Ancient Hermetic principles integrated</li>
+                        <li>• Perfect for meditation themes</li>
+                        <li>• Professional business-card size</li>
+                        <li>• Printable PDF with cut lines included</li>
+                    </ul>
+                </div>
+                
+                <!-- Bonus 3 -->
+                <div class="value-stack rounded-2xl p-8">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-3xl">🎁</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-green-400 mb-2">BONUS #3</h3>
+                        <h4 class="text-xl text-yellow-300 mb-2">Frequency Alignment Assessment Tool</h4>
+                        <p class="text-green-400 font-bold">($86 Value)</p>
+                    </div>
+                    
+                    <p class="text-purple-200 mb-4">Complete biofield evaluation system with personalized recommendations:</p>
+                    
+                    <ul class="space-y-2 text-purple-200">
+                        <li>• 55-question comprehensive assessment</li>
+                        <li>• Consciousness stage identification</li>
+                        <li>• Frequency alignment patterns analysis</li>
+                        <li>• Transition readiness evaluation</li>
+                        <li>• Personalized development recommendations</li>
+                    </ul>
+                </div>
+                
+                <!-- Bonus 4 -->
+                <div class="value-stack rounded-2xl p-8">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-yellow-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-3xl">🎁</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-yellow-400 mb-2">BONUS #4</h3>
+                        <h4 class="text-xl text-yellow-300 mb-2">90-Day Integration Planner</h4>
+                        <p class="text-green-400 font-bold">($97 Value)</p>
+                    </div>
+                    
+                    <p class="text-purple-200 mb-4">Systematic implementation support ensuring permanent transformation:</p>
+                    
+                    <ul class="space-y-2 text-purple-200">
+                        <li>• Week-by-week integration protocols</li>
+                        <li>• Daily practice architectures</li>
+                        <li>• Progress tracking systems</li>
+                        <li>• Crisis prevention protocols</li>
+                        <li>• Momentum maintenance strategies</li>
+                        <li>• Service development frameworks</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Limited Time Bonuses -->
+    <section class="py-20 px-4">
+        <div class="max-w-4xl mx-auto">
+            <div class="urgency-box rounded-2xl p-8 text-center">
+                <h2 class="font-serif text-3xl font-bold mb-8 text-red-400">
+                    LIMITED-TIME LAUNCH BONUSES<br>
+                    <span class="text-yellow-300">This Week Only</span>
+                </h2>
+                
+                <div class="grid md:grid-cols-3 gap-6 mb-8">
+                    <div class="bg-red-900/30 rounded-xl p-6">
+                        <h3 class="text-xl font-bold text-red-400 mb-2">🚨 LIFETIME COMMUNITY ACCESS</h3>
+                        <p class="text-green-400 font-bold mb-4">($197 Value)</p>
+                        <p class="text-purple-200 text-sm">Private group for ongoing support with weekly live Q&A calls. Lifetime access for first 100 customers only.</p>
+                    </div>
+                    
+                    <div class="bg-red-900/30 rounded-xl p-6">
+                        <h3 class="text-xl font-bold text-red-400 mb-2">🚨 PERSONAL EMAIL SUPPORT</h3>
+                        <p class="text-green-400 font-bold mb-4">($147 Value)</p>
+                        <p class="text-purple-200 text-sm">Direct access for questions about implementing the frameworks. Email responses within 48 hours. Available this week only.</p>
+                    </div>
+                    
+                    <div class="bg-red-900/30 rounded-xl p-6">
+                        <h3 class="text-xl font-bold text-red-400 mb-2">🚨 FUTURE UPDATE GUARANTEE</h3>
+                        <p class="text-green-400 font-bold mb-4">(Priceless)</p>
+                        <p class="text-purple-200 text-sm">All improvements and additional content added at no extra cost. New research integrations and expanded frameworks included.</p>
+                    </div>
+                </div>
+                
+                <div class="countdown-timer rounded-xl p-6 text-white">
+                    <h3 class="text-2xl font-bold mb-4">⏰ OFFER EXPIRES IN:</h3>
+                    <div class="text-4xl font-bold" id="countdown">
+                        Loading...
+                    </div>
+                    <p class="mt-4">Tuesday at 11:59 PM Pacific</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="font-serif text-4xl font-bold text-center mb-16 text-yellow-300">
+                What People Are Saying
+            </h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="testimonial-card rounded-xl p-6">
+                    <div class="text-yellow-400 mb-4">⭐⭐⭐⭐⭐</div>
+                    <p class="text-purple-200 mb-4 italic">
+                        "Finally, guidance that matches my reality. I've read dozens of transition books and hired three different coaches. 
+                        Nothing really helped until I understood my consciousness stage and got tools designed for my developmental level."
+                    </p>
+                    <p class="text-yellow-300 font-semibold">- Michelle, Systems Professional</p>
+                </div>
+                
+                <div class="testimonial-card rounded-xl p-6">
+                    <div class="text-yellow-400 mb-4">⭐⭐⭐⭐⭐</div>
+                    <p class="text-purple-200 mb-4 italic">
+                        "Just understanding why previous approaches hadn't worked was incredibly relieving. I stopped blaming myself for 
+                        'failure to implement' and started using consciousness-appropriate tools. The relief was immediate."
+                    </p>
+                    <p class="text-yellow-300 font-semibold">- David, Creative Professional</p>
+                </div>
+                
+                <div class="testimonial-card rounded-xl p-6">
+                    <div class="text-yellow-400 mb-4">⭐⭐⭐⭐⭐</div>
+                    <p class="text-purple-200 mb-4 italic">
+                        "I wish I'd had these tools during my last transition five years ago. Would have saved years of confusion and false starts. 
+                        The Strategic Navigation framework is particularly brilliant."
+                    </p>
+                    <p class="text-yellow-300 font-semibold">- Sarah, Consultant</p>
+                </div>
+                
+                <div class="testimonial-card rounded-xl p-6">
+                    <div class="text-yellow-400 mb-4">⭐⭐⭐⭐⭐</div>
+                    <p class="text-purple-200 mb-4 italic">
+                        "Most spiritual or personal development approaches feel too abstract for real-world implementation. 
+                        The Navigator bridges consciousness wisdom with practical action in a way that actually works."
+                    </p>
+                    <p class="text-yellow-300 font-semibold">- Michael, Department Manager</p>
+                </div>
+                
+                <div class="testimonial-card rounded-xl p-6">
+                    <div class="text-yellow-400 mb-4">⭐⭐⭐⭐⭐</div>
+                    <p class="text-purple-200 mb-4 italic">
+                        "I've had breakthrough insights before, but they usually faded when crisis pressure decreased. 
+                        The 90-Day Integration Planner helped me translate temporary insight into permanent life enhancement."
+                    </p>
+                    <p class="text-yellow-300 font-semibold">- Jennifer, Healthcare Professional</p>
+                </div>
+                
+                <div class="testimonial-card rounded-xl p-6">
+                    <div class="text-yellow-400 mb-4">⭐⭐⭐⭐⭐</div>
+                    <p class="text-purple-200 mb-4 italic">
+                        "The electromagnetic guidance protocols alone are worth the investment. I finally have reliable access to my own wisdom 
+                        instead of endless external seeking. Life-changing."
+                    </p>
+                    <p class="text-yellow-300 font-semibold">- Robert, Executive Coach</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who This Is For -->
+    <section class="py-20 px-4">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="font-serif text-4xl font-bold text-center mb-16 text-yellow-300">
+                Who This Is For
+            </h2>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Perfect For -->
+                <div class="glass-effect rounded-2xl p-8">
+                    <h3 class="text-2xl font-bold text-green-400 mb-6 text-center">✓ Perfect If You:</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <span class="benefit-check">✓</span>
+                            <span class="text-purple-200">Are experiencing a major life transition (career, relationship, purpose, spiritual awakening)</span>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="benefit-check">✓</span>
+                            <span class="text-purple-200">Understand that personal development requires more sophistication than generic self-help</span>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="benefit-check">✓</span>
+                            <span class="text-purple-200">Want tools that integrate consciousness wisdom with practical effectiveness</span>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="benefit-check">✓</span>
+                            <span class="text-purple-200">Are ready to do the inner work required for genuine transformation</span>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="benefit-check">✓</span>
+                            <span class="text-purple-200">Value approaches backed by research and real-world testing</span>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="benefit-check">✓</span>
+                            <span class="text-purple-200">Need frameworks that work with your consciousness stage rather than against it</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Not For -->
+                <div class="glass-effect rounded-2xl p-8 border-red-500/30">
+                    <h3 class="text-2xl font-bold text-red-400 mb-6 text-center">✗ NOT For You If:</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <span class="problem-x">✗</span>
+                            <span class="text-purple-200">You want quick fixes or motivation without implementation</span>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="problem-x">✗</span>
+                            <span class="text-purple-200">You prefer simple answers to complex developmental challenges</span>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="problem-x">✗</span>
+                            <span class="text-purple-200">You're not willing to invest time in developing internal guidance skills</span>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="problem-x">✗</span>
+                            <span class="text-purple-200">You want someone else to make decisions for you rather than developing your own capacity</span>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="problem-x">✗</span>
+                            <span class="text-purple-200">You're looking for entertainment rather than transformation tools</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Section -->
+    <section class="py-20 px-4" id="order">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="font-serif text-4xl font-bold text-center mb-16 text-yellow-300">
+                Your Investment
+            </h2>
+            
+            <div class="glass-effect rounded-2xl p-8 md:p-12 text-center">
+                <div class="mb-8">
+                    <p class="text-2xl text-purple-200 mb-4">Regular Price: <span class="price-strike text-gray-400">$97</span></p>
+                    <p class="text-4xl font-bold text-yellow-300 mb-2">Launch Week Price: $47</p>
+                    <p class="text-xl text-green-400">Total Bonus Value: $594</p>
+                    <p class="text-3xl font-bold text-yellow-300 mt-4">Your Complete Investment: $47</p>
+                </div>
+                
+                <div class="bg-blue-900/30 rounded-xl p-6 mb-8">
+                    <p class="text-xl text-blue-200 leading-relaxed">
+                        That's less than a single session with most coaches or therapists.<br><br>
+                        But unlike a single session, these frameworks serve you for life. Every challenge becomes a development opportunity. 
+                        Every crisis becomes potential catalyst. Every decision becomes conscious evolution.
+                    </p>
+                </div>
+                
+                <!-- Main CTA -->
+                <button onclick="purchaseProduct()" class="cta-button text-purple-900 font-bold text-2xl py-6 px-12 rounded-full mb-8 w-full max-w-lg">
+                    GET THE COMPLETE NAVIGATOR SYSTEM → $47
+                </button>
+                
+                <p class="text-purple-300">
+                    ⚡ Instant digital delivery • 💳 Secure checkout • 🔒 30-day guarantee
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guarantee -->
+    <section class="py-20 px-4">
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-green-900/20 border border-green-500/40 rounded-2xl p-8 md:p-12 text-center">
+                <h2 class="font-serif text-3xl font-bold text-green-400 mb-6">
+                    100% Satisfaction Guarantee
+                </h2>
+                
+                <div class="text-lg text-purple-200 leading-relaxed space-y-4">
+                    <p>
+                        I'm so confident the Navigator will provide valuable insights and practical tools for your specific transition 
+                        that I offer a complete <span class="text-green-400 font-bold">30-day satisfaction guarantee</span>.
+                    </p>
+                    
+                    <p>
+                        If you don't find the frameworks helpful for your consciousness development and transition navigation within 30 days, 
+                        I'll refund your entire investment. No questions asked.
+                    </p>
+                    
+                    <p class="text-2xl text-green-400 font-bold">
+                        You risk nothing. You gain consciousness-based navigation tools for life.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-20 px-4">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="font-serif text-4xl font-bold text-center mb-16 text-yellow-300">
+                Frequently Asked Questions
+            </h2>
+            
+            <div class="space-y-6" x-data="{ openFaq: null }">
+                <div class="glass-effect rounded-xl p-6">
+                    <button @click="openFaq = openFaq === 1 ? null : 1" class="w-full text-left flex justify-between items-center">
+                        <h3 class="text-xl font-bold text-yellow-300">"How is this different from other transition guidance?"</h3>
+                        <span class="text-2xl text-yellow-300" x-text="openFaq === 1 ? '-' : '+'"></span>
+                    </button>
+                    <div x-show="openFaq === 1" x-transition class="mt-4 text-purple-200">
+                        Most approaches assume everyone operates from the same consciousness stage and provides generic advice. 
+                        The Navigator is the first system designed specifically around consciousness development stages, 
+                        with tools that match your actual developmental level.
+                    </div>
+                </div>
+                
+                <div class="glass-effect rounded-xl p-6">
+                    <button @click="openFaq = openFaq === 2 ? null : 2" class="w-full text-left flex justify-between items-center">
+                        <h3 class="text-xl font-bold text-yellow-300">"What if I'm not sure what consciousness stage I'm at?"</h3>
+                        <span class="text-2xl text-yellow-300" x-text="openFaq === 2 ? '-' : '+'"></span>
+                    </button>
+                    <div x-show="openFaq === 2" x-transition class="mt-4 text-purple-200">
+                        The system includes comprehensive assessment tools that help you identify your stage, transition type, and developmental edge. 
+                        You'll have clarity about your consciousness profile within the first section.
+                    </div>
+                </div>
+                
+                <div class="glass-effect rounded-xl p-6">
+                    <button @click="openFaq = openFaq === 3 ? null : 3" class="w-full text-left flex justify-between items-center">
+                        <h3 class="text-xl font-bold text-yellow-300">"Is this too 'spiritual' for practical application?"</h3>
+                        <span class="text-2xl text-yellow-300" x-text="openFaq === 3 ? '-' : '+'"></span>
+                    </button>
+                    <div x-show="openFaq === 3" x-transition class="mt-4 text-purple-200">
+                        The Navigator integrates consciousness wisdom with strategic frameworks and real-world implementation. 
+                        Many users are business professionals, consultants, and pragmatic people who need approaches that work with careers, finances, and responsibilities.
+                    </div>
+                </div>
+                
+                <div class="glass-effect rounded-xl p-6">
+                    <button @click="openFaq = openFaq === 4 ? null : 4" class="w-full text-left flex justify-between items-center">
+                        <h3 class="text-xl font-bold text-yellow-300">"How much time does implementation require?"</h3>
+                        <span class="text-2xl text-yellow-300" x-text="openFaq === 4 ? '-' : '+'"></span>
+                    </button>
+                    <div x-show="openFaq === 4" x-transition class="mt-4 text-purple-200">
+                        The basic practices take 15-20 minutes daily. The assessment and planning tools are used as needed during decision-making. 
+                        Most people find the time investment minimal compared to the clarity and effectiveness gained.
+                    </div>
+                </div>
+                
+                <div class="glass-effect rounded-xl p-6">
+                    <button @click="openFaq = openFaq === 5 ? null : 5" class="w-full text-left flex justify-between items-center">
+                        <h3 class="text-xl font-bold text-yellow-300">"What if I've tried many approaches and nothing has worked?"</h3>
+                        <span class="text-2xl text-yellow-300" x-text="openFaq === 5 ? '-' : '+'"></span>
+                    </button>
+                    <div x-show="openFaq === 5" x-transition class="mt-4 text-purple-200">
+                        That experience often indicates you've been receiving guidance designed for different consciousness stages. 
+                        Stage-appropriate tools typically feel immediately more relevant and practical than previous approaches.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Urgency Section -->
+    <section class="py-20 px-4">
+        <div class="max-w-4xl mx-auto">
+            <div class="urgency-box rounded-2xl p-8 md:p-12 text-center">
+                <h2 class="font-serif text-3xl font-bold text-red-400 mb-6">
+                    Why This Week Matters
+                </h2>
+                
+                <div class="text-lg text-purple-200 leading-relaxed space-y-6">
+                    <p>
+                        Next month, the Navigator launches publicly at full price ($97) without the bonus materials or community access.
+                    </p>
+                    
+                    <p>
+                        But this week, I'm offering it to consciousness assessment participants for $47 because you've already demonstrated 
+                        commitment to consciousness-based development.
+                    </p>
+                    
+                    <p class="text-xl text-yellow-300 font-bold">
+                        More importantly, your transition is happening now.
+                    </p>
+                    
+                    <p>
+                        Every day you navigate with inadequate tools is a day of potential development lost. 
+                        Every week of confusion or false starts is time that could be spent implementing breakthrough frameworks.
+                    </p>
+                    
+                    <p class="text-2xl text-yellow-300 font-bold">
+                        Your consciousness evolution is too important to leave to chance.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Two Choices -->
+    <section class="py-20 px-4">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="font-serif text-4xl font-bold text-center mb-16 text-yellow-300">
+                Two Choices
+            </h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Choice 1 -->
+                <div class="glass-effect rounded-2xl p-8 border-red-500/30">
+                    <h3 class="text-2xl font-bold text-red-400 mb-6 text-center">Choice #1: Continue as You Are</h3>
+                    <p class="text-purple-200 leading-relaxed">
+                        Keep navigating your transition with whatever approaches you currently have. 
+                        See what develops over the next 6-12 months with existing tools and support systems.
+                    </p>
+                </div>
+                
+                <!-- Choice 2 -->
+                <div class="glass-effect rounded-2xl p-8 border-green-500/30">
+                    <h3 class="text-2xl font-bold text-green-400 mb-6 text-center">Choice #2: Get Consciousness-Appropriate Tools</h3>
+                    <p class="text-purple-200 leading-relaxed mb-6">
+                        Receive frameworks designed specifically for your developmental stage and begin implementing them immediately. 
+                        Have reliable navigation tools for this transition and all future consciousness development.
+                    </p>
+                    <button onclick="scrollToOrder()" class="cta-button text-purple-900 font-bold py-3 px-6 rounded-full w-full">
+                        Choose Conscious Evolution →
+                    </button>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <p class="text-2xl font-bold text-yellow-300">
+                    Which choice honors the importance of your evolution?
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-20 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="glass-effect rounded-2xl p-8 md:p-12">
+                <h2 class="font-serif text-4xl font-bold text-yellow-300 mb-8">
+                    Get The Navigator System
+                </h2>
+                
+                <div class="mb-8">
+                    <p class="text-3xl font-bold text-white mb-2">Complete System + All Bonuses</p>
+                    <p class="text-5xl font-bold text-yellow-300 mb-4">$47 (This Week Only)</p>
+                </div>
+                
+                <button onclick="purchaseProduct()" class="cta-button text-purple-900 font-bold text-2xl py-6 px-12 rounded-full mb-6 w-full max-w-lg">
+                    YES, GET THE NAVIGATOR SYSTEM NOW →
+                </button>
+                
+                <p class="text-red-400 font-bold text-lg mb-6">
+                    This offer expires Tuesday at 11:59 PM Pacific. After that, the system returns to full price without bonuses.
+                </p>
+                
+                <div class="countdown-timer rounded-xl p-4 text-white inline-block">
+                    <div class="text-2xl font-bold" id="finalCountdown">
+                        Loading...
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Personal Note -->
+    <section class="py-20 px-4">
+        <div class="max-w-4xl mx-auto">
+            <div class="glass-effect rounded-2xl p-8 md:p-12">
+                <h2 class="font-serif text-3xl font-bold text-center mb-8 text-yellow-300">
+                    A Personal Note
+                </h2>
+                
+                <div class="text-lg text-purple-200 leading-relaxed space-y-6">
+                    <p>
+                        I created the Navigator because I wished it had existed during my own consciousness transitions. 
+                        The years of confusion, false starts, and inadequate guidance could have been avoided with stage-appropriate tools and integrated support.
+                    </p>
+                    
+                    <p>
+                        Every framework comes from direct experience navigating multiple consciousness transitions combined with research from 
+                        neuroscience, developmental psychology, and consciousness studies.
+                    </p>
+                    
+                    <p class="text-xl text-yellow-300 font-semibold text-center">
+                        This isn't theory—it's practical wisdom that works.
+                    </p>
+                    
+                    <p>
+                        Every person who successfully navigates consciousness evolution makes it easier for others to do the same. 
+                        Your development contributes to collective awakening and planetary consciousness evolution.
+                    </p>
+                    
+                    <p>
+                        That's why I want these tools in the hands of everyone ready to use them.
+                    </p>
+                    
+                    <p class="text-xl text-center text-green-400 font-bold">
+                        Your consciousness development deserves professional-grade support.
+                    </p>
+                </div>
+                
+                <div class="text-center mt-8">
+                    <p class="text-purple-300 mb-4">With deep respect for your journey,</p>
+                    <p class="text-2xl font-bold text-yellow-300">Jerick Essers</p>
+                    <p class="text-purple-300">Consciousness Development Researcher & Transition Navigation Specialist</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Footer -->
+    <footer class="py-20 px-4 text-center">
+        <div class="max-w-2xl mx-auto">
+            <button onclick="purchaseProduct()" class="cta-button text-purple-900 font-bold text-xl py-4 px-8 rounded-full mb-4 w-full">
+                GET THE COMPLETE NAVIGATOR SYSTEM → $47
+            </button>
+            <p class="text-purple-300 mb-2">$47 This Week Only - All Bonuses Included</p>
+            <p class="text-red-400 font-bold">Offer expires Tuesday at 11:59 PM Pacific</p>
+            
+            <div class="mt-8 text-purple-400 text-sm">
+                <p>© 2024 Life's Compass. All rights reserved.</p>
+                <p>Contact: support@lifescompass.com</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll progress indicator
+        function updateScrollProgress() {
+            const scrollTop = window.pageYOffset;
+            const docHeight = document.body.offsetHeight;
+            const winHeight = window.innerHeight;
+            const scrollPercent = scrollTop / (docHeight - winHeight);
+            const progressBar = document.getElementById('scrollProgress');
+            
+            if (progressBar) {
+                progressBar.style.transform = `scaleX(${Math.min(scrollPercent, 1)})`;
+            }
+            
+            // Show floating CTA after 30% scroll
+            const floatingCTA = document.getElementById('floatingCTA');
+            if (floatingCTA) {
+                floatingCTA.style.opacity = scrollPercent > 0.3 ? '1' : '0';
+            }
+        }
+
+        // Countdown timer
+        function updateCountdown() {
+            // Set target date (Tuesday 11:59 PM Pacific)
+            const targetDate = new Date();
+            targetDate.setDate(targetDate.getDate() + ((2 + 7 - targetDate.getDay()) % 7)); // Next Tuesday
+            targetDate.setHours(23, 59, 0, 0); // 11:59 PM
+            
+            const now = new Date().getTime();
+            const distance = targetDate.getTime() - now;
+            
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            const countdownText = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+            
+            const countdownElements = document.querySelectorAll('#countdown, #finalCountdown');
+            countdownElements.forEach(el => {
+                if (el) el.textContent = countdownText;
+            });
+            
+            if (distance < 0) {
+                countdownElements.forEach(el => {
+                    if (el) el.textContent = "OFFER EXPIRED";
+                });
+            }
+        }
+
+        // Smooth scrolling functions
+        function scrollToOrder() {
+            document.getElementById('order').scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'center'
+            });
+        }
+
+        // Purchase function (replace with actual payment processor)
+        function purchaseProduct() {
+            // Replace this with your actual purchase link/integration
+            // For Lemon Squeezy, this would be their checkout URL
+            alert('Redirect to Lemon Squeezy checkout would happen here!');
+            // window.location.href = 'https://your-lemon-squeezy-checkout-url';
+        }
+
+        // Initialize everything
+        document.addEventListener('DOMContentLoaded', function() {
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+            
+            window.addEventListener('scroll', updateScrollProgress);
+            updateScrollProgress();
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+
+        // Add some visual effects
+        document.addEventListener('mousemove', function(e) {
+            const compass = document.querySelector('.compass-glow');
+            if (compass) {
+                const rect = compass.getBoundingClientRect();
+                const centerX = rect.left + rect.width / 2;
+                const centerY = rect.top + rect.height / 2;
+                const angleX = (e.clientX - centerX) / 100;
+                const angleY = (e.clientY - centerY) / 100;
+                
+                compass.style.transform = `perspective(1000px) rotateX(${angleY}deg) rotateY(${angleX}deg)`;
+            }
+        });
+    </script>
+</body>
+</html>
